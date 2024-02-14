@@ -1,0 +1,25 @@
+.animation {
+    animation-timeline: --subjectReveal; /* Property is experimental. Be cautious when using it.️ Specifies the names of one or more @scroll-timeline at-rules to describe the element's scroll animations. */
+    view-timeline: --subjectReveal block; 
+    /* Property is experimental. Be cautious when using it.️ The view-timeline CSS shorthand property is used to define a named view progress timeline, which is progressed through based on the change in visibility of an element (known as the subject) inside a scrollable element (scroller). view-timeline is set on the subject. */
+
+    animation-name: appear;
+    animation-range: entry;
+    animation-fill-mode: both;
+    animation-duration: 1ms;
+    width:400px;
+    display: flex;
+    justify-content: start;
+    /* align-items: center; */
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale:0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
